@@ -1,0 +1,36 @@
+.balatro-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #020202;
+}
+
+.balatro__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter-page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 32px 16px;
+}
+
+.newsletter-page .card {
+  box-sizing: border-box;
+  width: min(900px, 100%);
+  margin: 0;
+  translate: 0;
+}
+
+@media (max-width: 600px) {
+  .newsletter-page .card {
+    padding: 20px;
+  }
+}
