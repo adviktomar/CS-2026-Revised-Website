@@ -2,6 +2,8 @@ body {
     font-family:'Lexend';
     color:white;
     background-color: black;
+    margin:auto;
+    text-align: center;
 }
 
 
@@ -109,7 +111,7 @@ body {
   left: 0;
   width: 100%;
   height: 105%;
-  background-color: #5ad641;
+  background-color: #93BEDF;
   color: #000;
   display: flex;
   align-items: center;
@@ -169,7 +171,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8px;
-  z-index: 50;
+  z-index: 200;
   margin-inline: auto;
 }
 
@@ -245,11 +247,14 @@ body {
 .modal {
   width: fit-content;
   height: fit-content;
-  background: #FFFFFF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(GTA7.png);
+  background-size: cover;
   box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 26px;
   max-width: 700px;
-  margin-inline:auto;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
 }
 
 .form {
@@ -336,8 +341,9 @@ body {
 }
 
 .input_label {
-  font-size: 10px;
-  color: #8B8E98;
+  font-size: 15px;
+  font-style: bold;
+  color: white;
   font-weight: 600;
 }
 
@@ -348,7 +354,7 @@ body {
   border-radius: 9px;
   outline: none;
   background-color: #F2F2F2;
-  border: 1px solid #e5e5e500;
+  border: 1px solid #93BEDF;
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
@@ -385,4 +391,231 @@ body {
 
 .input_field[type=number] {
   -moz-appearance: textfield;
+}
+
+/* From Uiverse.io by SujitAdroja */ 
+.btn {
+  color: #93BEDF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #93BEDF;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: 93BEDF;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
+
+.blue {
+  color: #93BEDF;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+a {
+  color: #93BEDF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:#5ad641;
+}
+
+#up {
+  transform: translateY(-100px)
+}
+
+#blue {
+  color: #93BEDF;
+}
+div.light {
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.flipcard {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #93BEDF80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin:20px;
+}
+
+.flipcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops edges to fill without distortion */
+  display: block; 
+  fill: #93BEDF;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flipcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px #93BEDFFF;
+}
+
+.flipcard_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flipcard:hover .flipcard_content {
+  transform: rotateX(0deg);
+}
+
+.flipcard_title {
+  margin: 0;
+  font-size: 24px;
+  color: #93BEDF;
+  font-weight: 700;
+}
+
+.flipcard:hover img {
+  scale: 0;
+}
+
+.flipcard_description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* From Uiverse.io by Creatlydev */ 
+.jobcard {
+  margin: auto;
+  width: 380px;
+  background-color: #fefefe;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: #141417;
+}
+.jobcard__hero {
+  background-color: #93BEDF;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  height: 500px;
+}
+.jobcard__hero .card__job-title {
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+.jobcard__hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  font-weight: 700;
+}
+.jobcard__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.75rem;
+  row-gap: 1rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+@media (min-width: 340px) {
+  .jobcard__footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+.jobcard__job-summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+.jobcard__btn {
+  width: 100%;
+  font-weight: 400;
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  background-color: #141417;
+  color: #fff;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  .card__btn {
+    width: max-content;
+  }
+}
+
+.job {
+  margin:15px;
+  display:flex;
+  justify-content: space-evenly;
 }
