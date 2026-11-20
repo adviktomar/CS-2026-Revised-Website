@@ -1,45 +1,106 @@
 <html>
     <head>
         <title>Products</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="MorphSlider.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </head>
-    <body style="background-image: url(images.jpeg); font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white;">   
-        <center style="background-color:white;">
-            <nav style="background-color:white; padding:5px; font-size:20px;">
-                <a href="Homepage.html" style="color:black; text-decoration:none; margin-right:10px; font-size:20px;">Home</a>
-                <a href="About Us.html" style="color:black; text-decoration:none; margin-right:10px; font-size:20px;">About</a>
-                <a href="Products.html" style="color:black; text-decoration:none; margin-right:10px; font-size:20px;">Products</a>
-                <a href="Privacy Policy.html" style="color:black; text-decoration:none; margin-right:10px; font-size:20px;">Privacy Policy</a>       
-            </nav>         
-        </center>
+    <body>   
+        <!-- From Uiverse.io by mymiamo --> 
+        <div class="menu">
+        <a href="Homepage.html">
+            <span class="material-symbols-outlined">home</span>
+            <span>Home</span>
+        </a>
+        <a href="About Us.html">
+            <span class="material-symbols-outlined">article_person</span>
+            <span>About Us</span>
+        </a>
+        </a>
+        <a href="Products.html" class="active">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span>Products</span>
+        </a>
+        <a href="careers.html">
+            <span class="material-symbols-outlined">school</span>
+            <span>Careers</span>
+        </a>
+        <a href="newsletter.html">
+            <span class="material-symbols-outlined">news</span>
+            <span>Newsletter</span>
+        </a>
+        <a href="Privacy Policy.html">
+            <span class="material-symbols-outlined">fingerprint</span>            
+            <span>Privacy Policy</span>
+        </a>
+        </div>         
         <!--Navigation bar-->
         <br>
-        <center>
             <h1>Escape</h1>
-            <p>Escape is our roguelike indie game where the player is challenged to navigate through challenging procedurally generated levels to eventually fight the final boss. They must go through various levels, finding keys, healthpacks and uncovering the secrets of the world. On they way they will face numerous challenges and enemies. Outrun the clock and survive by ESCAPING!</p>
+            <p style="margin: 10px; font-size: 18px;">Escape is our roguelike indie game where the player is challenged to navigate through challenging procedurally generated levels to eventually fight the final boss. They must go through various levels, finding keys, healthpacks and uncovering the secrets of the world. On they way they will face numerous challenges and enemies. Outrun the clock and survive by ESCAPING!</p>
             <br>
-            <img src="Screenshot 2026-10-20 152046.png" width="500">
-            <img src="Screenshot 2026-10-20 152243.png" width="500">
+            <section class="morph-slider" aria-label="Escape game screenshots" tabindex="0">
+                <div class="morph-slider-track">
+                    <img class="morph-slide is-active" src="Screenshot 2026-10-20 152046.png" alt="Escape gameplay screenshot 1">
+                    <img class="morph-slide" src="Screenshot 2026-10-20 152243.png" alt="Escape gameplay screenshot 2">
+                    <img class="morph-slide" src="Screenshot 2026-10-20 152312.png" alt="Escape gameplay screenshot 3">
+                    <img class="morph-slide" src="Screenshot 2026-10-20 152332.png" alt="Escape gameplay screenshot 4">
+                </div>
+                <div class="morph-slider-caption" aria-live="polite"></div>
+                <div class="morph-slider-controls">
+                    <button class="morph-slider-btn" type="button" data-direction="-1" aria-label="Previous screenshot">&#8249;</button>
+                    <button class="morph-slider-btn" type="button" data-direction="1" aria-label="Next screenshot">&#8250;</button>
+                </div>
+                <div class="morph-slider-indicators" role="group" aria-label="Choose screenshot"></div>
+            </section>
+            <script src="MorphSlider.js" defer></script>
+            <!-- Escape screenshots are shown above in the interactive morph slider. -->
             <br>
-            <img src="Screenshot 2026-10-20 152312.png" width="500">
-            <img src="Screenshot 2026-10-20 152332.png" width="500">
-            <br>
-            <!--Photo collage of Escape in a 2x2 grid, width of 500px so everything fits on the page without needing to scroll sideways-->
-            <br>
-            <button style="background-color:white; color:black; padding:20px 50px; border:none; border-radius:5px; cursor:pointer; font-size:30px;" onclick="window.location.href='demo.html';"><strong>Play the Demo</strong></button>
+            <button class="btn" onclick="window.location.href='Demo.html';"><strong>Play the Demo</strong></button>
             <!--Button to play the demo in the Demo.html page-->
             <br>
             <br>
             <hr>
             <br>
             <h1>GTA VII</h1>
-            <p style="font-size:18px;">GTA VII is our highly anticipated open-world action-adventure game set in Antartica, Sucessor to <a href="https://www.rockstargames.com/VI" style="color:white;">GTA VI</a>. Featuring a vast open world to explore, engaging storylines, and immersive gameplay. Releasing early 2092, <a href="Preorder.html" style="color:white;">Pre-orders</a> are now open.</p>
+            <p style="font-size:18px; margin: 10px;">GTA VII is our highly anticipated open-world action-adventure game set in Antarctica, Successor to <a href="https://www.rockstargames.com/VI">GTA VI</a>. Featuring a vast open world to explore, engaging storylines, and immersive gameplay. Releasing early 2092, <a href="Preorder.html">Pre-orders</a> are now open.</p>
+            <button class="btn" onclick="window.location.href='Preorder.html';"><strong>Pre-order Now</strong></button>
             <p><em>Returns are subject to partner storefront policies (Steam, Playstation Store and Xbox Store).</em></p>
-            <!--Details for GTA VII with links to related pages, used font size 18 to improve readability and show importance of the information -->
-        </center>  
-        <br>
-        <hr>
+            <!--Details for GTA VII with links to related pages, used font size 18 to improve readability and show importance of the information -->  
     </body>
     <footer>
-            <center><p>Void Studios - &copy; 2026 All rights reserved.</p></center>
+        <div class="footer">
+            <div>
+                <nav>
+                <ul>
+                    <li>
+                        <a href="Homepage.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="About Us.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="Products.html">Products</a>    
+                    </li>
+                    <li>
+                        <a href="careers.html">Careers</a>
+                    </li>
+                    <li>
+                        <a href="newsletter.html">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="Privacy Policy.html">Privacy Policy</a>
+                    </li>
+                </ul>
+            </nav>
+                <p>Void Studios - &copy; 2026 All rights reserved.</p>
+            </div>
+            <div>
+                <img src="image-removebg-preview.png">
+            </div>        
+        </div>
     </footer>
 </html>

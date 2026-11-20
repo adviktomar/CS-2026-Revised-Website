@@ -1,0 +1,113 @@
+.morph-slider {
+    position: relative;
+    width: min(900px, calc(100% - 32px));
+    height: clamp(280px, 56vw, 510px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #0c0c0e;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, .35);
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.morph-slider-track,
+.morph-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.morph-slide {
+    display: block;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .65s ease;
+}
+
+.morph-slide.is-active { opacity: 1; }
+
+.morph-slider-caption {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    z-index: 2;
+    max-width: 70%;
+    padding: 8px 14px;
+    border-radius: 10px;
+    color: #fff;
+    background: rgba(10, 10, 12, .48);
+    backdrop-filter: blur(8px);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.morph-slider-controls {
+    position: absolute;
+    inset: 50% 0 auto;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.morph-slider-btn {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(12, 12, 14, .5);
+    font: inherit;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    backdrop-filter: blur(8px);
+}
+
+.morph-slider-btn:hover { background: rgba(45, 45, 50, .8); }
+.morph-slider:focus-visible,
+.morph-slider-btn:focus-visible,
+.morph-slider-dot:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+.morph-slider-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 18px;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.morph-slider-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .45);
+    cursor: pointer;
+    transition: width .35s ease, background .35s ease;
+}
+
+.morph-slider-dot.is-active { width: 22px; background: #fff; }
+
+@media (max-width: 420px) {
+    .morph-slider { width: calc(100% - 20px); height: 280px; }
+    .morph-slider-btn { width: 36px; height: 36px; }
+    .morph-slider-caption { left: 12px; bottom: 14px; font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .morph-slide,
+    .morph-slider-dot { transition: none; }
+}
